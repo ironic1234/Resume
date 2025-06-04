@@ -1,0 +1,208 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{calc}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\setlength{\footskip}{4.08003pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheadingLeft}[2]{
+    \item
+    \begin{description}[leftmargin=!,labelwidth=\widthof{\small\bfseries #1}]
+        \item[\small #1]{\textit{\small  #2}}
+    \end{description}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+        \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+            \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+	\textbf{\Huge \scshape Ronak Jain} \\ \vspace{1pt}
+	\small 617-840-1096 $|$ \href{mailto:rpjain06@gmail.com}{\underline{rpjain06@gmail.com}} $|$
+	\href{https://github.com/ironic1234}{\underline{github.com/ironic1234}} $|$
+	\href{https://www.linkedin.com/in/ronakpjain}{\underline{linkedin.com/in/ronakpjain}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Purdue University}{May 2027}
+{Electrical Engineering}{West Lafayette, IN}
+\resumeSubSubheadingLeft
+{Relevant Coursework:}{Advanced C Programming, Introduction to Electrical Engineering + Lab I and II), Python for Data Science, Linear Algebra, Multivariate Calculus, Ordinary Differential Equations}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{Purdue Robomasters Club}{August 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Develop firmware for STM32 microcontrollers using embedded C to control robotic systems.}
+\resumeItem{Design and implement control algorithms for omni-wheel and swerve-drive robots, enhancing maneuverability.}
+\resumeItem{Automate build processes and command generation with scripting to improve development efficiency.}
+\resumeItem{Design PCBs for motor control, integrating electrical and embedded systems for high-performance robotics.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{Purdue Electric Racing}{September 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Design and manufacture PCBs for vehicle testing, optimizing power distribution and sensor integration.}
+\resumeItem{Port an existing task scheduler to FreeRTOS, improving real-time performance and system reliability.}
+\resumeItem{Develop a hardware abstraction layer for a high-speed external oscillator to improve timing accuracy and system stability.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{Mofi}{May 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Developed a Spotlight-inspired macOS application launcher using Tauri, Rust, and Svelte for quick keyboard-driven app launching}
+\resumeItem{Implemented fuzzy search, keyboard navigation, and efficient UI rendering to enhance user experience and productivity}
+\resumeItem{Integrated Rust backend logic for dynamic discovery and launching of applications from standard macOS directories}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{Async Rust Webserver}{May 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Engineered a minimal HTTP server in Rust utilizing Tokio for asynchronous event-driven request handling and response generation}
+\resumeItem{Implemented Unix socket listening with concurrent request handling to optimize server performance and resource utilization}
+\resumeItem{Created a robust request parsing system and error handling to deliver efficient static file serving and clear HTTP responses}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{CatVim}{September 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Built a highly customized Neovim setup enhancing developer productivity with integrated debugging (DAP), comprehensive language server support (LSP), and streamlined workflows}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Mentor}{December 2022 -- August 2024}
+{Einstein's Workshop}{Burlington, MA}
+\resumeItemListStart
+\resumeItem{Instructed and mentored students in computer science and engineering subjects, including programming and CAD, fostering hands-on learning and creativity}
+\resumeItem{Organized summer camps with over 20 students each week, delivering sessions on Minecraft Modding and 3D Printing, cultivating critical thinking and technical skills in an engaging environment}
+\resumeItem{Coordinated and managed up to 3 birthday parties per weekend, overseeing projects, event logistics, and ensuring a fun and welcoming environment for attendees}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+	      \textbf{Languages}{: Python, C++/C, CUDA, Java, Lua, Rust} \\
+	      \textbf{Developer Tools}{: Git, Docker, AWS, \textbf{NeoVim}} \\
+	      \textbf{Manufacturing}{: PCB design (EasyEDA, Altium), 3D Printing/CAD (Solidworks, Fusion 360), Laser Cutting}
+	      }}
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
