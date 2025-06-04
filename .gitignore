@@ -2,4 +2,6 @@
 !main.tex
 !.gitignore
 !.github/
+!.github/workflows/
+!.github/workflows/latex-release.yml
 !README.md

@@ -1,0 +1,35 @@
+name: Build and Release Resume
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Compile LaTeX
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: main.tex
+
+    - name: Get timestamp
+      id: time
+      run: |
+        echo "timestamp=$(date -u +'%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
+
+    - name: Rename PDF
+      run: |
+        mv main.pdf "Ronak_Jain_Resume-${{ steps.time.outputs.timestamp }}.pdf"
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: build-${{ steps.time.outputs.timestamp }}
+        name: Resume Build ${{ steps.time.outputs.timestamp }}
+        files: "Ronak_Jain_Resume-${{ steps.time.outputs.timestamp }}.pdf"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
