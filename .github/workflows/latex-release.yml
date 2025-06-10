@@ -29,7 +29,7 @@ jobs:
         mv main.pdf "Ronak_Jain_Resume.pdf"
 
     - name: Create Release
-      uses: softprops/action-gh-release@v2
+      uses: ncipollo/release-action@v1
       with:
         tag_name: build-${{ steps.time.outputs.timestamp }}
         name: Resume Build ${{ steps.time.outputs.timestamp }}
