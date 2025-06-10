@@ -31,8 +31,8 @@ jobs:
     - name: Create Release
       uses: ncipollo/release-action@v1
       with:
-        tag: build-2025-06-10_02-44
-        name: Release ${{ github.ref_name }}
+        tag: build-${{ steps.time.outputs.timestamp }}
+        name: Resume Build ${{ steps.time.outputs.timestamp }}
         files: Ronak_Jain_Resume.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
