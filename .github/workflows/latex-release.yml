@@ -33,6 +33,6 @@ jobs:
       with:
         tag: build-${{ steps.time.outputs.timestamp }}
         name: Resume Build ${{ steps.time.outputs.timestamp }}
-        files: Ronak_Jain_Resume.pdf
+        bodyFile: Ronak_Jain_Resume.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
