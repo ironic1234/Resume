@@ -127,7 +127,7 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {Purdue University}{West Lafayette, IN}
-{B.S. in Electrical Engineering, GPA: 3.73 / 4.0}{May 2027}
+{B.S. in Electrical Engineering}{May 2027}
 \resumeSubSubheadingLeft
 {Relevant Coursework:}{Advanced C Programming, Introduction to Electrical Engineering + Lab I and II), Python for Data Science, Linear Algebra, Multivariate Calculus, Ordinary Differential Equations}
 \resumeSubHeadingListEnd
@@ -152,36 +152,29 @@
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\href{https://github.com/PurdueRM/Embedded-Control}{\uline{Purdue Robomasters}}}{August 2024 -- Present}
+{\href{https://github.com/PurdueRM/Embedded-Control}{\uline{Purdue Robomasters}} -- Controls Subteam Lead}{August 2024 -- Present}
 \resumeItemListStart
-\resumeItem{Develop firmware for STM32 microcontrollers using embedded C to control robotic systems.}
-\resumeItem{Design and implement control algorithms for omni-wheel and swerve-drive robots, enhancing maneuverability.}
-\resumeItem{Automate build processes and command generation with scripting to improve development efficiency.}
-\resumeItem{Design PCBs for motor control, integrating electrical and embedded systems for high-performance robotics.}
+\resumeItem{Lead the controls subteam in developing high-performance firmware for STM32 microcontrollers using C, overseeing the complete software development lifecycle for robotic systems.}
+\resumeItem{Carry out a refactor of the legacy codebase, establishing a modular interface to streamline the integration of a new, more powerful STM32H7 series microcontroller.}
+\resumeItem{Architect and implement advanced control algorithms, including PID and odometry, for omni-wheel and swerve-drive robots to achieve precise and fluid battlefield maneuverability.}
+\resumeItem{Implemented and debugged firmware on-site during the annual Robomaster competition, adapting control logic in a high-pressure environment to meet changing strategic needs.}
 \resumeItemListEnd
 
 \resumeProjectHeading
 {\href{https://github.com/PurdueElectricRacing/firmware}{\uline{Purdue Electric Racing}}}{September 2024 -- Present}
 \resumeItemListStart
-\resumeItem{Design and manufacture PCBs for vehicle testing, optimizing power distribution and sensor integration.}
-\resumeItem{Port an existing task scheduler to FreeRTOS, improving real-time performance and system reliability.}
-\resumeItem{Develop a hardware abstraction layer for a high-speed external oscillator to improve timing accuracy and system stability.}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\href{https://github.com/ironic1234/mofi}{\uline{Mofi}}}{May 2025 -- Present}
-\resumeItemListStart
-\resumeItem{Developed a Spotlight-inspired macOS application launcher using Tauri, Rust, and Svelte for quick keyboard-driven app launching}
-\resumeItem{Implemented fuzzy search, keyboard navigation, and efficient UI rendering to enhance user experience and productivity}
-\resumeItem{Integrated Rust backend logic for dynamic discovery and launching of applications from standard macOS directories}
+\resumeItem{Migrate a bare-metal task scheduler to a FreeRTOS implementation, significantly improving real-time determinism and system reliability for safety-critical vehicle functions.}
+\resumeItem{Develop a robust hardware abstraction layer for a high-speed external oscillator, enhancing timing accuracy and stability across all microcontroller peripherals and vehicle control systems.}
+\resumeItem{Maintain a UART communication platform for bidirectional data exchange with a PC, enabling real-time data streaming and streamlined firmware validation during development.}
+\resumeItem{Design and manage a CI/CD pipeline using GitHub Actions to automate the build, packaging, and distribution of firmware binaries, ensuring consistent and reliable releases for team-wide deployment.}
 \resumeItemListEnd
 
 \resumeProjectHeading
 {\href{https://github.com/ironic1234/ronfire}{\uline{Ronfire}}}{May 2025 -- Present}
 \resumeItemListStart
-\resumeItem{Engineered a minimal HTTP server in Rust utilizing Tokio for asynchronous event-driven request handling and response generation}
-\resumeItem{Implemented Unix socket listening with concurrent request handling to optimize server performance and resource utilization}
-\resumeItem{Created a robust request parsing system and error handling to deliver efficient static file serving and clear HTTP responses}
+\resumeItem{Engineered a high-performance, asynchronous HTTP server in Rust, optimizing the non-blocking I/O architecture to achieve a sustained throughput of over 4,100 requests/sec (1.65 GB/s) when serving image files.}
+\resumeItem{Implement concurrent request processing over Unix sockets to maximize server throughput and optimize resource utilization in multi-client environments.}
+\resumeItem{Develop a robust request parsing engine and error handling module to guarantee reliable serving and adherence to HTTP protocol standards.}
 \resumeItemListEnd
 
 \resumeProjectHeading
@@ -196,7 +189,7 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
 	\small{\item{
-	      \textbf{Languages}{: Python, C++/C, CUDA, Java, Lua, Rust} \\
+	      \textbf{Languages}{: C, C++, Python, Rust, Lua} \\
 	      \textbf{Developer Tools}{: Git, Docker, AWS, \textbf{NeoVim}} \\
 	      \textbf{Manufacturing}{: PCB design (EasyEDA, Altium), 3D Printing/CAD (Solidworks, Fusion 360), Laser Cutting}
 	      }}
